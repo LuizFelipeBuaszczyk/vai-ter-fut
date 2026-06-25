@@ -38,10 +38,10 @@ async function send_form(formData) {
     const data = await response.json();
 
     if (data.can_play) {
-      resultDisplay.innerText = "Vai dar bom";
+      resultDisplay.innerText = "Vai ter fut!";
       resultDisplay.className = "result-success";
     } else {
-      resultDisplay.innerText = "São Pedro não vai colaborar :(";
+      resultDisplay.innerText = "Sem fut :(";
       resultDisplay.className = "result-error";
     }
 

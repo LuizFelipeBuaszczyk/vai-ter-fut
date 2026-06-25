@@ -1,7 +1,7 @@
 from dto.tree_dto import RequestTree, ResponseTree
 from services import clf
 
-class TreeService:
+class AIService:
     
     @staticmethod
     async def is_possible_play_soccer(data: RequestTree):

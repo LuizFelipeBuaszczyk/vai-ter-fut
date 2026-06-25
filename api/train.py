@@ -15,10 +15,6 @@ X = df.iloc[:,:3]
 Y = df.iloc[:,-1] 
 
 ## Treina
-clf = tree.DecisionTreeClassifier()
+clf = tree.DecisionTreeClassifier(criterion='gini')
 clf = clf.fit(X,Y)
 
-## Predição - temperatura, esta_chovendo, percentual_umidade
-result = clf.predict([[10, 0, 50]])
-
-print(result)

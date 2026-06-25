@@ -1,34 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="utf-8">
-    <title>Título da Página</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./scripts.js" defer ></script>
-</head>    
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vai ter o fute dos guri?</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./scripts.js" defer></script>
+  </head>
+  <body>
     <header>
-        <h1>Vai ter o fute dos guri?</h1>
+      <h1>Vai ter o fute dos guri?</h1>
     </header>
     <main>
-        <form id='form-post-tree'>
-            <section class="sectionInput">
-                <label for="input-temperature">Temperatura</label>
-                <input type="number" id="input-temperature" name="temperature">
-            <section>
-            <section class="sectionInput">
-                <label for="input-humidity">Percentil de Umidade</label>
-                <input type="number" min="0" max="100" id="input-humidity" name="humidity">
-            <section>
-            <section class="sectionInput">
-                <label for="input-is-raining">Está chovendo</label>
-                <input type="checkbox" name="is_raining" id="input-is-raining">
-            <section>
-            <button onclick="submit">Enviar</button>
-        </form>
+      <form id="form-post-tree">
+        <section class="sectionInput">
+          <label for="input-temperature">Temperatura (°C)</label>
+          <input
+            type="number"
+            id="input-temperature"
+            name="temperature"
+            required
+          />
+        </section>
+        <section class="sectionInput">
+          <label for="input-humidity">Percentil de Umidade</label>
+          <input
+            type="number"
+            min="0"
+            max="100"
+            id="input-humidity"
+            name="humidity"
+            required
+          />
+        </section>
+        <section class="sectionInput checkbox-section">
+          <input type="checkbox" name="is_raining" id="input-is-raining" />
+          <label for="input-is-raining">Está chovendo</label>
+        </section>
+        <button type="submit" id="submit-btn">Enviar</button>
+      </form>
+
+      <section id="result-section" style="display: none">
+        <h2>Resultado</h2>
+        <div id="result-display"></div>
+      </section>
     </main>
-    <footer>
-        
-    </footer>
-</body>
+    <footer></footer>
+  </body>
 </html>

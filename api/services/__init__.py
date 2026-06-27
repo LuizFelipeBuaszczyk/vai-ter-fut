@@ -1,2 +1,2 @@
-from train import clf
+from tree.train import clf
 

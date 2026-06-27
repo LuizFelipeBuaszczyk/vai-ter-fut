@@ -1,3 +1,4 @@
+import joblib
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn import tree
@@ -13,6 +14,8 @@ clf = tree.DecisionTreeClassifier()
 clf = tree.DecisionTreeClassifier(criterion='gini', max_depth=3)
 clf = clf.fit(X,Y)
 
+joblib.dump(clf, './tree/tree.joblib')
+
 ## PDF da árvore
 fig, ax = plt.subplots(figsize=(15, 10))
 
@@ -26,5 +29,5 @@ tree.plot_tree(
 )
 
 # 4. Salvar diretamente em PDF
-plt.savefig('arvore_decisao.pdf', format='pdf', bbox_inches='tight', dpi=300)
+plt.savefig('./tree/arvore_decisao.pdf', format='pdf', bbox_inches='tight', dpi=300)
 plt.close()
